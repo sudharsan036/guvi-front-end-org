@@ -1,3 +1,4 @@
+//Extract data from URL
 function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     return params.get("id");
@@ -11,7 +12,7 @@ function getQueryParams() {
   async function fetchMovieDetails(movieId) {
     try {
       const response = await fetch(
-        `https://guvi-backend-org-final.onrender.com/movie/${movieId}`
+        `https://localhost:3001/movie/${movieId}`
       );
       const movie = await response.json();
   
@@ -119,7 +120,7 @@ function getQueryParams() {
   
     try {
       const response = await fetch(
-        "https://guvi-backend-org-final.onrender.com/movie/book-movie",
+        "https://localhost:3001/movie/book-movie",
         {
           method: "POST",
           headers: {
