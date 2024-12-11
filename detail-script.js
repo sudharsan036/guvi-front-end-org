@@ -12,7 +12,7 @@ function getQueryParams() {
   async function fetchMovieDetails(movieId) {
     try {
       const response = await fetch(
-        `https://localhost:6754/movie/${movieId}`
+        `https://localhost:8976/movie/${movieId}`
       );
       const movie = await response.json();
   
@@ -120,7 +120,7 @@ function getQueryParams() {
   
     try {
       const response = await fetch(
-        "https://localhost:6754/movie/book-movie",
+        "https://localhost:8976/movie/book-movie",
         {
           method: "POST",
           headers: {

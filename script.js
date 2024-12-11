@@ -4,7 +4,7 @@
 
 async function fetchMovies() {
     try {
-      const response = await fetch("https://localhost:6754/movie/get-movies");
+      const response = await fetch("http://localhost:8976/movie/get-movies");
       const movies = await response.json();
       const movieCardsContainer = document.getElementById("movieCards");
       movieCardsContainer.innerHTML = "";
@@ -32,3 +32,4 @@ async function fetchMovies() {
   }
   
   fetchMovies();
+
